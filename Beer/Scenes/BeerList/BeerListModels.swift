@@ -10,12 +10,20 @@ import Foundation
 public enum BeerListModel {
 
     public struct Request {
-        let page: Int
         let query: String?
+        let type: RequestType
     }
 
+    public enum RequestType {
+        case initialLoad
+        case pagination
+        case search(String)
+    }
+    
     public struct Response {
-        let beers: [BeerDTO]
+        let beers: [Beer]
+        let isNewDataSet: Bool
+        let isEndOfList: Bool 
     }
 
     public struct ViewModel {

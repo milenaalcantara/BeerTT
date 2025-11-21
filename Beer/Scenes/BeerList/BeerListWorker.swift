@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol BeerListWorkerProtocol {
+public protocol BeerListWorkerProtocol: AnyObject {
     func fetchBeers(page: Int,
                     query: String?,
                     completion: @escaping (Result<[BeerDTO], Error>) -> Void)

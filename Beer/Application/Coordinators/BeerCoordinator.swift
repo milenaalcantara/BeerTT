@@ -9,13 +9,17 @@ final class BeerCoordinator {
     }
 
     func start() {
-        print("start Beer coordinator")
-        let viewController = BeerListConfigurator.makeModule()
+        let viewController = BeerListConfigurator.makeModule(coordinator: self)
         navigationController.pushViewController(viewController, animated: false)
     }
 
     func startBeerDetail(beer: Beer) {
         let detailVC = BeerDetailConfigurator.makeModule(beer: beer)
         navigationController.pushViewController(detailVC, animated: true)
+    }
+    
+    func startFavoriteList() {
+        let favoritesVC = FavoritesListConfigurator.makeModule()
+        navigationController.topViewController?.navigationController?.pushViewController(favoritesVC, animated: true)
     }
 }

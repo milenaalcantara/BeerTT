@@ -7,23 +7,25 @@
 
 import UIKit
 
-protocol BeerListRoutingProtocol {
+public protocol BeerListRoutingProtocol: AnyObject {
     func routeToDetails(beer: Beer)
+    func routeToFavoriteList()
 }
 
 final class BeerListRouter: BeerListRoutingProtocol {
-    weak var viewController: UIViewController?
     var coordinator: BeerCoordinator?
 
     func routeToDetails(beer: Beer) {
-        // prefer coordinator if available
         if let coordinator = coordinator {
             coordinator.startBeerDetail(beer: beer)
             return
         }
-
-        // fallback: build and push detail directly using BeerDetailConfigurator if coordinator not set
-        let detailVC = BeerDetailConfigurator.makeModule(beer: beer)
-        viewController?.navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
+    func routeToFavoriteList() {
+        if let coordinator = coordinator {
+            coordinator.startFavoriteList()
+            return
+        }
     }
 }

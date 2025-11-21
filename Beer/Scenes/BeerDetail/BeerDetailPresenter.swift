@@ -10,7 +10,6 @@ import UIKit
 public protocol BeerDetailPresenterProtocol {
     func presentDetail(response: BeerDetailModel.Response)
     func presentError(_ error: Error)
-    func presentLoading(_ isLoading: Bool)
     func presentFavoriteStatus(isFavorite: Bool)
 }
 
@@ -19,15 +18,15 @@ final class BeerDetailPresenter: BeerDetailPresenterProtocol {
 
     func presentDetail(response: BeerDetailModel.Response) {
 
-        let vm = BeerDetailModel.ViewModel(
+        let viewModel = BeerDetailModel.ViewModel(
             title: response.beer.title,
             subtitle: response.beer.type,
-            imageName: response.beer.imageName ?? "beer_default",
-            description: response.beer.description ?? "beer_default",
+            imageName: response.beer.imageName,
+            description: response.beer.description,
             isFavorite: response.isFavorite
         )
 
-        viewController?.displayDetail(vm)
+        viewController?.displayDetail(viewModel)
     }
     
     func presentFavoriteStatus(isFavorite: Bool) {
@@ -36,9 +35,5 @@ final class BeerDetailPresenter: BeerDetailPresenterProtocol {
 
     func presentError(_ error: Error) {
         viewController?.displayError(error.localizedDescription)
-    }
-
-    func presentLoading(_ isLoading: Bool) {
-        viewController?.displayLoading(isLoading)
     }
 }

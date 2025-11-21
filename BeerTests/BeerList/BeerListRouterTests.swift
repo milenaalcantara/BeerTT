@@ -20,8 +20,6 @@ final class BeerListRouterTests: XCTestCase {
 
         let listVC = UIViewController()
         navigation.viewControllers = [listVC]
-
-        sut.viewController = listVC
     }
 
     func test_navigateToDetail_pushesDetailScreen() {

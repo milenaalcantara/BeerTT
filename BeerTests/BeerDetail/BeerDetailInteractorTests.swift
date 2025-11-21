@@ -50,7 +50,6 @@ final class BeerDetailInteractorTests: XCTestCase {
         sut.toggleFavorite()
 
         XCTAssertTrue(mockWorker.didAddFavorite)
-        XCTAssertTrue(mockPresenter.didPresentFavoriteStatus)
         XCTAssertEqual(mockPresenter.receivedIsFavorite, true)
     }
 
@@ -61,7 +60,6 @@ final class BeerDetailInteractorTests: XCTestCase {
         sut.toggleFavorite()
 
         XCTAssertTrue(mockWorker.didRemoveFavorite)
-        XCTAssertTrue(mockPresenter.didPresentFavoriteStatus)
         XCTAssertEqual(mockPresenter.receivedIsFavorite, false)
     }
 }

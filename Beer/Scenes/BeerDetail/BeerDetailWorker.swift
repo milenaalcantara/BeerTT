@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 public protocol BeerDetailWorkerProtocol {
     func isFavorite(id: String) -> Bool
     func addFavorite(_ beer: Beer)

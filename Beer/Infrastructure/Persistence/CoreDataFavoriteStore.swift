@@ -32,10 +32,10 @@ final class CoreDataFavoriteStore: CoreDataFavoriteStoreProtocol {
     func addFavorite(_ beer: Beer) {
         let fav = stack.create(FavoriteBeer.self)
         fav.id = beer.id
-        fav.title = beer.title
+        fav.name = beer.title
         fav.type = beer.type
-        fav.desc = beer.description ?? "default Description"
-        fav.imageName = beer.imageName ?? "beer_default"
+        fav.desc = beer.description
+        fav.imageName = beer.imageName
         stack.saveContext()
     }
 
@@ -50,10 +50,12 @@ final class CoreDataFavoriteStore: CoreDataFavoriteStoreProtocol {
         let items = stack.fetch(FavoriteBeer.fetchRequest())
         return items.map {
             Beer(id: $0.id,
-                 title: $0.title,
+                 title: $0.name,
                  type: $0.type,
                  description: $0.desc,
-                 imageName: $0.imageName)
+                 imageName: $0.imageName,
+                 isFavorite: false
+            )
         }
     }
 }

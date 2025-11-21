@@ -41,13 +41,6 @@
 			);
 			target = 36B8CC052EC9065A001C517C /* Beer */;
 		};
-		36C2DCA82ECA2214008E2BB9 /* Exceptions for "Frameworks" folder in "Beer" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				/Users/milenaalcantara/Desktop/Beer/Frameworks/ThemeKit,
-			);
-			target = 36B8CC052EC9065A001C517C /* Beer */;
-		};
 		36C2DCE72ECF5FE9008E2BB9 /* Exceptions for "BeerTests" folder in "BeerTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -92,9 +85,6 @@
 		};
 		36C2DCA62ECA2207008E2BB9 /* Frameworks */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				36C2DCA82ECA2214008E2BB9 /* Exceptions for "Frameworks" folder in "Beer" target */,
-			);
 			path = Frameworks;
 			sourceTree = "<group>";
 		};

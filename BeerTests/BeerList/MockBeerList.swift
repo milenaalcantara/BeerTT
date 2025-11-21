@@ -19,8 +19,6 @@ final class MockBeerListWorker: BeerListWorkerProtocol {
 }
 
 final class MockBeerListPresenter: BeerListPresenterProtocol {
-
-    // Flags de verificação
     var didReceiveSuccess = false
     var didReceiveError = false
     var didSelectBeer = false
@@ -37,5 +35,13 @@ final class MockBeerListPresenter: BeerListPresenterProtocol {
     func presentSelectedBeer(beer: Beer) {
         didSelectBeer = true
         selectedBeer = beer
+    }
+    
+    func presentLoadingState() {
+        
+    }
+    
+    func presentEmptyState() {
+        
     }
 }

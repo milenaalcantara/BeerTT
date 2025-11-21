@@ -35,11 +35,11 @@ public enum AppFont {
     }
 
     // MARK: - Estilos de Fonte (Design System)
-    public static let largeTitle = UIFont(name: FontName.semibold, size: 24)
+    public static let largeTitle = UIFont(name: FontName.bold, size: 24)
     
     public static let title = UIFont(name: FontName.bold, size: 22)
     
-    public static let subtitle = UIFont(name: FontName.medium, size: 15)
+    public static let subtitle = UIFont(name: FontName.semibold, size: 12)
     
     public static let body = UIFont(name: FontName.medium, size: 14)
 }

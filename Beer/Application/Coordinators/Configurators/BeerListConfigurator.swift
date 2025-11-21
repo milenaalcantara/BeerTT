@@ -8,8 +8,7 @@
 import UIKit
 
 enum BeerListConfigurator {
-    
-    static func makeModule() -> BeerListViewController {
+    static func makeModule(coordinator: BeerCoordinator? = nil) -> BeerListViewController {
         let view = BeerListViewController()
 
         let worker = BeerListWorker(network: NetworkService())
@@ -21,8 +20,11 @@ enum BeerListConfigurator {
         view.router = router
 
         interactor.presenter = presenter
+        
         presenter.viewController = view
-        router.viewController = view
+        presenter.router = router
+        
+        router.coordinator = coordinator
 
         return view
     }

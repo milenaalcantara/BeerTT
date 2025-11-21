@@ -8,16 +8,9 @@
 import Foundation
 
 struct MockDescriptionProvider {
-    private static let descriptions: [String] = [
-        "Cerveja leve, com notas frutadas e final seco.",
-        "Corpo médio, amargor equilibrado e aroma de malte.",
-        "Sabor encorpado, notas torradas e toque de caramelo.",
-    ]
-
-    static func description(for id: String, title: String, type: String?) -> String {
-        // deterministic pick based on hash para estabilidade
-        let index = abs(id.hashValue) % descriptions.count
-        return descriptions[index]
+    static func description() -> String {
+        let mockDescription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        return mockDescription
     }
 }
 

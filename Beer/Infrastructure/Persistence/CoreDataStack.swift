@@ -10,7 +10,7 @@ import CoreData
 final class CoreDataStack {
 
     // MARK: - Singleton (opcional)
-    static let shared = CoreDataStack(modelName: "BeerModel")
+    static let shared = CoreDataStack(modelName: "Beer")
 
     // MARK: - Properties
     private let persistentContainer: NSPersistentContainer
