@@ -48,7 +48,24 @@
 			);
 			target = 36B8CC052EC9065A001C517C /* Beer */;
 		};
+		36C2DCE72ECF5FE9008E2BB9 /* Exceptions for "BeerTests" folder in "BeerTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				BeerList/BeerListPresenterTests.swift,
+			);
+			target = 36B8CC1E2EC9065B001C517C /* BeerTests */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		36C2DCE82ECF5FE9008E2BB9 /* Exceptions for "BeerTests" folder in "Copy Bundle Resources" phase from "BeerTests" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 36B8CC1D2EC9065B001C517C /* Resources */;
+			membershipExceptions = (
+				BeerList/BeerListPresenterTests.swift,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		36B8CC082EC9065A001C517C /* Beer */ = {
@@ -61,6 +78,10 @@
 		};
 		36B8CC222EC9065B001C517C /* BeerTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				36C2DCE72ECF5FE9008E2BB9 /* Exceptions for "BeerTests" folder in "BeerTests" target */,
+				36C2DCE82ECF5FE9008E2BB9 /* Exceptions for "BeerTests" folder in "Copy Bundle Resources" phase from "BeerTests" target */,
+			);
 			path = BeerTests;
 			sourceTree = "<group>";
 		};
