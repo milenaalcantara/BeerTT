@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36B8CD2C2ECA0607001C517C /* ThemeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 36B8CD2B2ECA0607001C517C /* ThemeKit */; };
+		36522A812ED8EDD80020B4E0 /* ThemeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 36522A802ED8EDD80020B4E0 /* ThemeKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36B8CD2C2ECA0607001C517C /* ThemeKit in Frameworks */,
+				36522A812ED8EDD80020B4E0 /* ThemeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +172,7 @@
 			);
 			name = Beer;
 			packageProductDependencies = (
-				36B8CD2B2ECA0607001C517C /* ThemeKit */,
+				36522A802ED8EDD80020B4E0 /* ThemeKit */,
 			);
 			productName = Beer;
 			productReference = 36B8CC062EC9065A001C517C /* Beer.app */;
@@ -257,7 +257,7 @@
 			mainGroup = 36B8CBFD2EC9065A001C517C;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				36B8CD2A2ECA0607001C517C /* XCLocalSwiftPackageReference "ThemeKit" */,
+				36522A7F2ED8EDD80020B4E0 /* XCLocalSwiftPackageReference "Frameworks/ThemeKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 36B8CC072EC9065A001C517C /* Products */;
@@ -654,14 +654,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		36B8CD2A2ECA0607001C517C /* XCLocalSwiftPackageReference "ThemeKit" */ = {
+		36522A7F2ED8EDD80020B4E0 /* XCLocalSwiftPackageReference "Frameworks/ThemeKit" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ThemeKit;
+			relativePath = Frameworks/ThemeKit;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		36B8CD2B2ECA0607001C517C /* ThemeKit */ = {
+		36522A802ED8EDD80020B4E0 /* ThemeKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ThemeKit;
 		};
