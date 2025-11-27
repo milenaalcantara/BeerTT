@@ -28,7 +28,7 @@ final class AppCoordinator: CoordinatorProtocol {
         let beerCoordinator = BeerCoordinator(navigationController: navigationController)
         self.beerCoordinator = beerCoordinator
         beerCoordinator.start()
-        
+         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         setupAppearence()
@@ -37,7 +37,7 @@ final class AppCoordinator: CoordinatorProtocol {
     func setupAppearence() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = AppColor.brandPrimary
+        appearance.backgroundColor = AppColor.brand
         appearance.largeTitleTextAttributes = [.foregroundColor: AppColor.textOnBrand]
         appearance.titleTextAttributes = [.foregroundColor: AppColor.textOnBrand]
         
@@ -51,9 +51,9 @@ final class AppCoordinator: CoordinatorProtocol {
     
     func setupSearchBarAppearence() {
         UISearchBar.appearance().tintColor = AppColor.textOnBrand
-        let searchTextField = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
-        searchTextField.textColor = AppColor.textPrimary
-        searchTextField.backgroundColor = .white
-        UISearchBar.appearance().setImage(UIImage(systemName: "magnifyingglass"), for: .search, state: .normal)
+    
+        let searchTextFieldProxy = UISearchTextField.appearance()
+        searchTextFieldProxy.textColor = AppColor.textPrimary
+        searchTextFieldProxy.backgroundColor = AppColor.surface
     }
 }

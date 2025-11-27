@@ -33,6 +33,7 @@ final class BeerListViewController: UIViewController {
         table.translatesAutoresizingMaskIntoConstraints = false
         table.estimatedRowHeight = 100
         table.rowHeight = UITableView.automaticDimension
+        table.backgroundColor = .clear
         return table
     }()
 
@@ -132,8 +133,6 @@ final class BeerListViewController: UIViewController {
     @objc private func favoritesButtonTapped() {
         router?.routeToFavoriteList()
     }
-
-    
 }
 
 extension BeerListViewController {

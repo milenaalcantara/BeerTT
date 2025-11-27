@@ -9,36 +9,57 @@ import UIKit
 
 public enum AppColor {
     
-    private static let bundle = Bundle.module
+    // MARK: - Helpers Privados
+    private static func dynamicColor(light: UIColor, dark: UIColor) -> UIColor {
+        return UIColor { traitCollection in
+            switch traitCollection.userInterfaceStyle {
+            case .dark:
+                return dark
+            default:
+                return light
+            }
+        }
+    }
     
     // MARK: - Brand
     
-    /// Cor principal da marca (usado na Nav Bar).
-    public static var brandPrimary = UIColor(named: "BrandPrimary", in: bundle, compatibleWith: nil) ?? UIColor.blue
-    
-    /// Cor secundária da marca (usado na Splash).
-    public static var brandSecondary = UIColor(named: "BrandSecondary", in: bundle, compatibleWith: nil) ?? UIColor.blue
-    
+    /// Cor principal da marca.
+    public static var brand: UIColor = dynamicColor(
+        light: UIColor(red: 74, green: 144, blue: 226),
+        dark:  UIColor(red: 40, green: 79, blue: 124)
+    )
     
     // MARK: - Background
     
-    /// Cor de fundo principal das telas.
-    public static var background = UIColor(named: "Background", in: bundle, compatibleWith: nil) ?? UIColor.white
+    public static var background: UIColor = dynamicColor(
+        light: UIColor(red: 255, green: 255, blue: 255),
+        dark:  UIColor(red: 15, green: 23, blue: 42)
+    )
     
-    /// Cor de fundo de componentes.
-    public static var surface = UIColor(named: "Surface", in: bundle, compatibleWith: nil) ?? UIColor.gray
-    
+    public static var surface: UIColor = dynamicColor(
+        light: UIColor(red: 246, green: 246, blue: 246),
+        dark:  UIColor(red: 30, green: 41, blue: 59)
+    )
     
     // MARK: - Text
     
-    /// Cor para textos primários.
-    public static var textPrimary = UIColor(named: "TextPrimary", in: bundle, compatibleWith: nil) ?? UIColor.black
+    public static var textPrimary: UIColor = dynamicColor(
+        light: UIColor(red: 102, green: 102, blue: 102),
+        dark:  UIColor(red: 226, green: 232, blue: 240)
+    )
     
-    /// Cor para textos secundários.
-    public static var textSecondary = UIColor(named: "TextSecondary", in: bundle, compatibleWith: nil) ?? UIColor.black
+    public static var textSecondary: UIColor = dynamicColor(
+        light: UIColor(red: 177, green: 177, blue: 177),
+        dark:  UIColor(red: 148, green: 163, blue: 184)
+    )
     
-    /// Cor de texto para ser usada sobre a `brandPrimary`.
-    public static var textOnBrand = UIColor(named: "TextOnBrand", in: bundle, compatibleWith: nil) ?? UIColor.white
+    public static var textOnBrand: UIColor = dynamicColor(
+        light: UIColor(red: 255, green: 255, blue: 255),
+        dark:  UIColor(red: 255, green: 255, blue: 255)
+    )
     
-    public static var searchPlaceholder = UIColor(named: "TextPlaceholder", in: bundle, compatibleWith: nil) ?? UIColor.black
+    public static var searchPlaceholder: UIColor = dynamicColor(
+        light: UIColor(red: 102, green: 102, blue: 102),
+        dark:  UIColor(red: 102, green: 102, blue: 102)
+    )
 }
